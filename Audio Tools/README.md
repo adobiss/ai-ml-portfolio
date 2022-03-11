@@ -1,2 +1,2 @@
-# Audio-Tools-Portfolio
-A single script that downloads audio files, extracts metadata, slices and uploads the slices to Google Drive. fxBoard allows applying pedalboard style effects to audio files.
+# Audio Tools Portfolio
+download_mp3_trim_and_upload.py is a single script that downloads audio files, extracts metadata, slices and uploads the slices to Google Drive. fxBoard allows applying pedalboard style effects to audio files.
