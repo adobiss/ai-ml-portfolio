@@ -1,2 +1,2 @@
 # reinforcement_learning
- Reinforcement learning algorithm practice
+Reinforcement learning algorithm practice
