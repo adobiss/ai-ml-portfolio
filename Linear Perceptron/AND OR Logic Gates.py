@@ -14,9 +14,7 @@ def plot_chart(X, w, attempt_counter):
     
     # Adjust function domain display
     
-    #x = np.linspace(-np.max(X_inputs), np.max(X_inputs))
-    #x = np.linspace(-np.max(X), np.max(X))
-    x = np.linspace(-2, 2)
+    x = np.linspace(-np.max(X), np.max(X))
     
     # Obtain coefficients
     
