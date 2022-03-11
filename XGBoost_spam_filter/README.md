@@ -1,2 +1,2 @@
-# ai-ml-portfolio
-Collection of personal projects covering feature extraction, model evaluation, information retrieval, predictive analytics and more using NLP techniques, classification and regression algorithms.
+# XGBoost-Spam-Filter-Portfolio
+Feature selection, model selection criteria, training and evaluation. Created without using any spam filter specific manuals.
