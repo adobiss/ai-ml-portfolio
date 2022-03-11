@@ -1,2 +1,2 @@
 # Linear Perceptron Portfolio
-AND-OR gate linear classifier built from scratch in Python using only numpy and matplotlib (no linear classiifer related Python tutorials used).
+Personal project to understand the algorithm at its most basic level using only numpy. Takes inputs and target values from csv and calculates weights by feeding neuron output directly into MAX loss function. The loss function is then minimised using stochastic gradient descent and minimising MAX loss function. Decision boundary is then plotted and distance to inputs is calculated.
