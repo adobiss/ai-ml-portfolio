@@ -8,7 +8,7 @@ from pydub import AudioSegment
 from fileUpload import uploadDrive
 from pydub.utils import mediainfo
 
-filepath = r"D:\ML\Musiio\PoCs\Roblox\seg_3.csv"
+filepath = r""
 
 audio_link_list = []
 segment_file_name = [] 
@@ -18,7 +18,7 @@ artist_name = []
 segment_file_path = []
 duration_delta = []
 full_song_duration = []
-musiio_track_id = []
+track_id = []
 preview_segment = []
 preview_segment_score = []
 
@@ -35,7 +35,7 @@ for ind in source.index:
     url = source['URL_FILENAME'][ind]
     split = urlparse(url)
     file_name = split.path.split("/")[-1]
-    target_folder = 'D:/ML/Musiio/PoCs/Roblox/Segments_3/' ###location to save files and segments, ###add create directory, ###check buffer vs. saving
+    target_folder = '' ###location to save files and segments, ###add create directory, ###check buffer vs. saving
     target_file_path = target_folder + file_name + '.mp3'
     urllib.request.urlretrieve(url, target_file_path) 
     #file = file_orig.replace('file://', '')
@@ -85,7 +85,7 @@ for ind in source.index:
     #composer_name.append(composer)
     
     # Add other columns from file
-    musiio_track_id.append(source['MUSIIO TMP ID'][ind])
+    track_id.append(source['TMP ID'][ind])
     preview_segment.append(segment_Time)
     preview_segment_score.append(source['SCORE'][ind])
     
@@ -96,16 +96,16 @@ for ind in source.index:
 drive_input = {'segment_path': segment_file_path, 'segment_file_name': segment_file_name}
 original_url = {'ORIGINAL URL': audio_link_list, 'TITLE': song_title, 'ARTIST': artist_name,
                 'name': segment_file_name, 'DURATION DELTA (s)': duration_delta, 'FULL SONG DURATION': full_song_duration,
-                'MUSIIO TRACK ID': musiio_track_id, 'PREVIEW SEGMENT 1': preview_segment, 'SCORE': preview_segment_score}
+                'TRACK ID': track_id, 'PREVIEW SEGMENT 1': preview_segment, 'SCORE': preview_segment_score}
 
 drive_upload_list = pd.DataFrame(drive_input)
 original_links = pd.DataFrame(original_url)
 
 # Export original links and metadata
-original_links.to_csv(path_or_buf=r"D:\ML\Musiio\PoCs\Roblox\Roblox_original_links_metadata_output.csv", sep=',', index=False, encoding='utf-8-sig')
+original_links.to_csv(path_or_buf=r"", sep=',', index=False, encoding='utf-8-sig')
 
 folder_id = ''
-target_file_path = r"D:\ML\Musiio\PoCs\Roblox\Roblox_output_mp3.csv"
+target_file_path = r""
 
 # Upload to Drive
 drive_df = uploadDrive(folder_id, drive_upload_list, target_file_path) ###check if drive folder empty to avoid duplication
@@ -118,7 +118,7 @@ dataframe_join = pd.merge(original_links,
 
 # Reorder and add empty ISRC column
 dataframe_join = dataframe_join.rename(columns={'webViewLink': 'URL'})
-dataframe_join = dataframe_join[['ORIGINAL URL', 'URL', 'MUSIIO TRACK ID', 'TITLE', 'ARTIST', 'PREVIEW SEGMENT 3', 'SCORE','DURATION DELTA (s)', 'FULL SONG DURATION']]
+dataframe_join = dataframe_join[['ORIGINAL URL', 'URL', 'TRACK ID', 'TITLE', 'ARTIST', 'PREVIEW SEGMENT 3', 'SCORE','DURATION DELTA (s)', 'FULL SONG DURATION']]
 dataframe_join.insert(loc=2, column='ISRC', value=None)
 
-dataframe_join.to_csv(path_or_buf=r"D:\ML\Musiio\PoCs\Roblox\Roblox_output_mp3.csv", sep=',', index=False, encoding='utf-8-sig')
+dataframe_join.to_csv(path_or_buf=r"", sep=',', index=False, encoding='utf-8-sig')
