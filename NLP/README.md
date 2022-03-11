@@ -1,2 +1,2 @@
-# ai-ml-portfolio
-Collection of personal projects covering feature extraction, model evaluation, information retrieval, predictive analytics and more using NLP techniques, classification and regression algorithms.
+# NLP-Portfolio
+An attempt to recommend songs based on song lyrics sentiment analysis and classification. Intro into raw text processing - sentence segmentation, part-of-speech tagging.
