@@ -1,2 +1,2 @@
-# ai-ml-portfolio
-Collection of personal projects covering feature extraction, model evaluation, information retrieval, predictive analytics and more using NLP techniques, classification and regression algorithms.
+# Audio-Tools-Portfolio
+A single script that downloads audio files, extract metadata, slices and uploads the slices to Google Drive. fxBoard allows applying pedalboard style effects to aduio files.
