@@ -32,7 +32,7 @@ def uploadDrive(folder_id, drive_upload_list, target_file_path):
 
     service = build('drive', 'v3', credentials=creds)
     
-    #folder_id = '1DCig4Q3BojV6QDLk82kO_td8r-jy_BRn'
+    #folder_id = ''
     
     #file_list = pd.read_csv(r"D:\ML\Musiio\PoCs\Roblox\Links\Roblox_drive_upload.csv")
     

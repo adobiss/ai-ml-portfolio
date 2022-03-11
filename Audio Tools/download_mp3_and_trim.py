@@ -104,8 +104,7 @@ original_links = pd.DataFrame(original_url)
 # Export original links and metadata
 original_links.to_csv(path_or_buf=r"D:\ML\Musiio\PoCs\Roblox\Roblox_original_links_metadata_output.csv", sep=',', index=False, encoding='utf-8-sig')
 
-#folder_id = '1qLaTa9iaINo8ZvyCc6HSr01Qy0eVGjJX'
-folder_id = '1_e7WtWKTbDK7E4t8UWymq89RsFBZ7JOB'
+folder_id = ''
 target_file_path = r"D:\ML\Musiio\PoCs\Roblox\Roblox_output_mp3.csv"
 
 # Upload to Drive

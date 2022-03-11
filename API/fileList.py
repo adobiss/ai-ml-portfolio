@@ -31,7 +31,7 @@ def main():
 
     service = build('drive', 'v3', credentials=creds)
     
-    folder_id = '18pkWF2plaxXV2rp2OJSHwGN_PMBV56w0'
+    folder_id = ''
     query = f"parents = '{folder_id}' and trashed=false" 
     
     response = service.files().list(q=query, pageSize=1000, fields="nextPageToken, files(id, name, webViewLink)").execute()
