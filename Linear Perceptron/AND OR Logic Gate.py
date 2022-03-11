@@ -157,7 +157,7 @@ while np.any(np.matmul(X, w) * Y <= 0):
             #plot_chart(X, w, attempt_counter)
             #print(w, "step {}".format(i + 1))
 
-# Measure Distance
+# Measure distance to decision boundary
             
 w_mag = np.linalg.norm(w)
 
