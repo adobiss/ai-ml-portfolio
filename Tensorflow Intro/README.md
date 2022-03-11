@@ -1,2 +1,2 @@
-# Tensorflow-Intro
-Introduction to Tensorflow in the context of Reinforcement Learning and Linear Regression.
+# TensorFlow-Intro
+Introduction to TensorFlow in the context of Reinforcement Learning and Linear Regression.
